@@ -1,19 +1,13 @@
-import React, { useState } from "react";
-import { Text, View, TextInput, Button } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-type ScreenProps = {
-  navigation: any;
-};
-
-const Home = (props: ScreenProps) => {
-  const [input, setInput] = useState("");
+export default function Home(props: any) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={{ color: "#006600", fontSize: 40 }}>Home Screen!</Text>
-      <Ionicons name="home" size={80} color="#006600" />
+    <View style={styles.container}>
+      <Text>Home Screen!</Text>
+      <StatusBar style="auto" />
 
-      <Button
+        <Button
         title="Go to Profile"
         color="#006600"
         onPress={() =>
@@ -22,6 +16,14 @@ const Home = (props: ScreenProps) => {
       />
     </View>
   );
-};
+}
 
-export default Home;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#ffee00',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  
+});

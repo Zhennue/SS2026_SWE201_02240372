@@ -1,25 +1,28 @@
-import React from "react";
-import { Text, View, Button } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
-type ScreenProps = {
-  navigation: any;
-};
-
-const Profile = (props: ScreenProps) => {
+export default function Profile(props: any) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={{ color: "#006600", fontSize: 40 }}>Profile Screen!</Text>
-      <Ionicons name="person-circle-outline" size={80} color="#006600" />
-      
+    <View style={styles.container}>
+      <Text>Profile Screen!</Text>
+      <StatusBar style="auto" />
+
       <Button
-        title="Go back Home"
+        title="Go to Home"
         color="#006600"
         onPress={() => 
           props.navigation.navigate("Home")}
       />
     </View>
   );
-};
+}
 
-export default Profile;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#800080',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  
+});
