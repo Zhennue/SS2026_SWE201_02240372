@@ -28,4 +28,3 @@ npx expo start
 
 - Contact and timetable data are static sample data for this assignment.
 - External map links require internet connectivity.
-- iOS execution requires macOS tooling.
