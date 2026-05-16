@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "PushDemo",
+    "slug": "push-demo",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.zhennue.pushdemo"
+    },
+
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.zhennue.pushdemo"
+    },
+
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#ffffff",
+          "defaultChannel": "default"
+        }
+      ]
+    ],
+
+    "extra": {
+      "eas": {
+        "projectId": "8f230e36-5190-49f8-88e2-fedc76390bf9"
+      }
+    }
+  }
+}
